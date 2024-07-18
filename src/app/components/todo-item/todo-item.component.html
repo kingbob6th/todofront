@@ -1,0 +1,13 @@
+<mat-list-item>
+  <mat-checkbox
+    [(ngModel)]="todo.isCompleted"
+    (change)="onUpdate()"
+  ></mat-checkbox>
+  <mat-form-field appearance="fill">
+    <mat-label>Details</mat-label>
+    <input matInput [(ngModel)]="todo.details" (blur)="onUpdate()" />
+  </mat-form-field>
+  <button mat-icon-button color="warn" (click)="onDelete()">
+    <mat-icon>delete</mat-icon>
+  </button>
+</mat-list-item>
